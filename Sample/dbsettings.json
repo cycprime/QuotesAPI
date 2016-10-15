@@ -1,0 +1,11 @@
+{
+
+  "MySql": {
+    "Server": "localhost",
+    "Database": "database",
+    "UserID": "user",
+    "UserPasswd": "password",
+    "Pooling": "false"
+  }
+
+}

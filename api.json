@@ -1,0 +1,211 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "API V1"
+    },
+    "basePath": "/",
+    "paths": {
+        "/api/RNGQuote": {
+            "get": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteGet",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuotePost",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "application/json-patch+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "value",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/RNGQuote/{id}": {
+            "get": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteByIdGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteByIdPut",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "application/json-patch+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "value",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteByIdDelete",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/RNGQuote/all/{num}": {
+            "get": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteAllByNumGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "num",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "entries",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/RNGQuote/all/PageCount": {
+            "get": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteAllPageCountGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "entries",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/api/RNGQuote/QuotesCount": {
+            "get": {
+                "tags": [
+                    "RNGQuote"
+                ],
+                "operationId": "ApiRNGQuoteQuotesCountGet",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {},
+    "securityDefinitions": {}
+}
