@@ -9,6 +9,60 @@ As the API was built prior to Oracle MySql supporting .NET Core, I made use of t
 I might update this later on.  For the time being, it is serviceable for the purpose of creating a web api for random quotes.
 
 
+## Building
+Install the latest [.NET Core](https://www.microsoft.com/net/core).
+
+Clone directory:
+
+    > git clone https://github.com/cycprime/QuotesAPI
+    > cd QuotesAPI
+    > dotnet restore
+
+    
+## Set Up
+Before running the code, you would need to supply it with valid configurations.
+
+To do so, create a directory called `Config`:
+
+    > mkdir Config
+    
+For database connection credentials, copy `dbsettings.json` from `Sample` to `Config` and update the necessary credentials.
+
+    > cp Sample/dbsettings.json Config
+
+For NLog logging customization, copy `nlog.config` from `Sample` to `Config` and make customize the log output based on [NLog configuration](https://github.com/nlog/NLog/wiki/Configuration-file) specifications.
+
+    > cp Sample/nlog.config Config
+    
+Make sure that the locations specified in `appsettings.json` for `"DBSettings"` and `"NLog"` are in synch with the locations of your customized configuration files.
+
+Once the configurations are set up, compile the code:
+
+    > dotnet build
+    
+Before your first time running the application as a web host serving up random quotes, you need to run the application in console mode to set up the database:
+
+    > dotnet run --mode setup --seed <seed file>
+    
+A sample seed file, `SeedQuotes.json`, is available in the `Sample` directory.  You can modify it to include your own quotes to seed the database.
+
+Assuming that the database has been seeded successfully, you can then run the application in web api mode:
+
+    > dotnet run
+    
+To access a random quotes on your localhost, typein the URL:
+
+    http://localhost:5000/api/RNGQuote/
+    
+It will return you a random quote from the database that you have just seeded.
+
+To access the [Swagger](http://swagger.io/) documentation of the Random Quote API, type into the URL:
+
+    http://localhost:5000/
+
+This will allow you to try out different routes in the API.
+
+
 ## To Run This Particular App
 *   To run in web api mode: 
 
@@ -123,3 +177,6 @@ A sample file of the NLog configuration is available at `Sample/nlog.config`.
 
 Once the configuration is put in place, simply modify `appsettings.json` 
 to point to the location of NLog configuration file.
+
+## License
+This web api is licensed under the [MIT License](https://github.com/cycprime/QuotesAPI/blob/master/License.txt).
