@@ -1,3 +1,26 @@
+November 14, 2016 - cycprime
+ *  Modified CHANGELOG to outline the changes made in the commit for 
+    November 14, 2016.  Most of the changes are for facilitating the 
+    use of Docker with cycprime/QuotesAPI and cycprime/QuotesAPIMySQL.
+
+ *  Modified project.json to publish Swagger's api.json, and database
+    configuration, Config/dbsettings.json.
+
+ *  Modified Dockerfile to create the corresponding QuotesAPI image from
+    the published files from .NET Core.
+
+ *  Created .dockerignore file to include only the published files as well
+    any pfx files when creating the Docker image.
+
+ *  Added env/runtime/sample.env to provide a sample file to include in 
+    Docker container creation for the database (cycprime/QuotesAPIMySQL).
+
+ *  Added Data/SampleQuotes.json to provide a mount point and a sample file 
+    for Docker to use when seeding the database and for adding new quotes 
+    to the database 
+
+
+
 October 14, 2016 - cycprime
  *  Added in README.md to provide cursory instruction on how to 
     download and build the api.

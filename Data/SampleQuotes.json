@@ -1,0 +1,20 @@
+[
+  {
+    "RefId": "<External Ref ID>",
+    "Content": "<Quote Content>",
+    "Source": "<Source of the Quote>",
+    "SourceUrl": "<URL for the Source>"
+  },
+  {
+    "RefId": "Wulfware-Sample-01",
+    "Content": "If you want a happy ending, that depends, of course, on where you stop your story.",
+    "Source": "Mozzie, White Collar",
+    "SourceUrl": "http://whitecollar.wikia.com/wiki/Top_10_list:Top_10_Mozzie_Quotes"
+  },
+  {
+    "RefId": "Wulfware-Sample-02",
+    "Content": "The reason for time is so that everything doesn't happen at once.",
+    "Source": "Mozzie, White Collar",
+    "SourceUrl": "http://whitecollar.wikia.com/wiki/Top_10_list:Top_10_Mozzie_Quotes"
+  }
+]
