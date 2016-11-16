@@ -1,3 +1,7 @@
+November 15, 2016 - cycprime
+ *  Updated README.md to include instruction for Docker build.
+
+
 November 14, 2016 - cycprime
  *  Modified CHANGELOG to outline the changes made in the commit for 
     November 14, 2016.  Most of the changes are for facilitating the 

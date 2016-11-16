@@ -178,5 +178,18 @@ A sample file of the NLog configuration is available at `Sample/nlog.config`.
 Once the configuration is put in place, simply modify `appsettings.json` 
 to point to the location of NLog configuration file.
 
+## Docker
+Published DLLs is required before building the image for Docker.  To publish the DLLs and all related files and directories for .NET Core, do the following:
+
+    > dotnet publish
+    
+Once the DLLs and related files and directories have been published, run the normal build process for Docker to create the docker image for QuotesAPI:
+
+    > docker build -t quotesapi .
+    
+The image will create a mount point at `/app/Logs` for log files, `/app/Data` for new quotes files (for seeding or new addition).  Use Docker's `--volume` option to map these mount points to the corresponding data volumes or local directories.
+
+For more information about creating containers based on the QuotesAPI Docker image, please refer to the image, [cycprime/quotesapi](https://hub.docker.com/r/cycprime/quotesapi/), on DockerHub.
+
 ## License
 This web api is licensed under the [MIT License](https://github.com/cycprime/QuotesAPI/blob/master/License.txt).
