@@ -55,7 +55,9 @@
             "Views",
             "Areas/**/Views",
             "appsettings.json",
+            "api.json",
             "web.config",
+            "Config/dbsettings.json",
             "Config/nlog.config"
         ]
     },
